@@ -1,0 +1,156 @@
+/* Fun Page */
+.fun-page {
+  min-height: 100vh;
+  background-color: #121212;
+  transition: background-color 0.3s ease;
+  padding: 40px;
+}
+
+body.light-mode .fun-page {
+  background-color: #F2F2F2;
+}
+
+.fun-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Fun Section */
+.fun-section {
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+/* Section Title */
+.fun-section-title {
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 2rem 2rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 48px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  text-align: left;
+  gap: 2rem;
+}
+
+.fun-section-title:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.light-mode .fun-section-title {
+  color: #121212;
+}
+
+body.light-mode .fun-section-title:hover {
+  background-color: rgba(18, 18, 18, 0.05);
+}
+
+/* Arrow Icon */
+.fun-arrow {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  font-family: 'Geist Mono', monospace;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fun-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+/* Image Grid */
+.fun-image-grid {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0; /* No gaps between images */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fun-image-grid.expanded {
+  max-height: 2000px; /* Increased to show all images */
+}
+
+body.light-mode .fun-image-grid {
+  background-color: rgba(18, 18, 18, 0.02);
+}
+
+/* Image Items */
+.image-item {
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  display: inline-block;
+  width: calc(33.333% - 0px);
+  margin: 0;
+  padding: 0;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.image-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Illustrations Grid - 2x2 Layout */
+.illustrations-grid .image-item {
+  width: calc(50% - 0px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fun-page {
+    padding: 30px;
+  }
+  
+  .fun-section-title {
+    font-size: 36px;
+    padding: 1.5rem 1.5rem;
+  }
+  
+  .image-item {
+    width: calc(50% - 0px);
+  }
+}
+
+@media (max-width: 480px) {
+  .fun-page {
+    padding: 20px;
+  }
+  
+  .fun-section-title {
+    font-size: 28px;
+    padding: 1rem 1rem;
+  }
+  
+  .image-item {
+    width: calc(100% - 0px);
+  }
+}
