@@ -5,6 +5,7 @@ const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isProjectHovering, setIsProjectHovering] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const animationFrameRef = useRef();
   const cursorRef = useRef();
 
@@ -32,38 +33,58 @@ const CustomCursor = () => {
   }, []);
 
   useEffect(() => {
-    // Add event listeners with passive option for better performance
-    document.addEventListener('mousemove', updateCursor, { passive: true });
-    
-    // Add hover listeners to interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .toggle-switch');
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', handleMouseEnter, { passive: true });
-      el.addEventListener('mouseleave', handleMouseLeave, { passive: true });
-    });
+    // Detect if device is touch-enabled
+    const checkTouchDevice = () => {
+      const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      setIsTouchDevice(isTouch);
+    };
 
-    // Add hover listeners to project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(el => {
-      el.addEventListener('mouseenter', handleProjectEnter, { passive: true });
-      el.addEventListener('mouseleave', handleProjectLeave, { passive: true });
-    });
+    checkTouchDevice();
+
+    // Only add mouse event listeners if not a touch device
+    if (!isTouchDevice) {
+      // Add event listeners with passive option for better performance
+      document.addEventListener('mousemove', updateCursor, { passive: true });
+      
+      // Add hover listeners to interactive elements
+      const interactiveElements = document.querySelectorAll('a, button, .toggle-switch');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', handleMouseEnter, { passive: true });
+        el.addEventListener('mouseleave', handleMouseLeave, { passive: true });
+      });
+
+      // Add hover listeners to project cards
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(el => {
+        el.addEventListener('mouseenter', handleProjectEnter, { passive: true });
+        el.addEventListener('mouseleave', handleProjectLeave, { passive: true });
+      });
+    }
 
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
-      document.removeEventListener('mousemove', updateCursor);
-      interactiveElements.forEach(el => {
-        el.removeEventListener('mouseenter', handleMouseEnter);
-        el.removeEventListener('mouseleave', handleMouseLeave);
-      });
-      projectCards.forEach(el => {
-        el.removeEventListener('mouseenter', handleProjectEnter);
-        el.removeEventListener('mouseleave', handleProjectLeave);
-      });
+      if (!isTouchDevice) {
+        document.removeEventListener('mousemove', updateCursor);
+        const interactiveElements = document.querySelectorAll('a, button, .toggle-switch');
+        interactiveElements.forEach(el => {
+          el.removeEventListener('mouseenter', handleMouseEnter);
+          el.removeEventListener('mouseleave', handleMouseLeave);
+        });
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(el => {
+          el.removeEventListener('mouseenter', handleProjectEnter);
+          el.removeEventListener('mouseleave', handleProjectLeave);
+        });
+      }
     };
-  }, [updateCursor, handleMouseEnter, handleMouseLeave, handleProjectEnter, handleProjectLeave]);
+  }, [updateCursor, handleMouseEnter, handleMouseLeave, handleProjectEnter, handleProjectLeave, isTouchDevice]);
+
+  // Don't render custom cursor on touch devices
+  if (isTouchDevice) {
+    return null;
+  }
 
   return (
     <div 

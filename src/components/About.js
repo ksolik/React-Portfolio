@@ -89,35 +89,37 @@ const About = () => {
       
       <section className="jobs-section">
         <div className="experience-list">
-                                <div className="job-item">
-                        <button 
-                          className="job-title" 
-                          onClick={() => toggleJob('job1')}
-                        >
-                          <span>UX Design Intern | 2025</span>
-                          <svg 
-                            className={`job-arrow ${expandedJob === 'job1' ? 'expanded' : ''}`}
-                            width="16" 
-                            height="16" 
-                            viewBox="0 0 24 24" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            strokeWidth="2" 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round"
-                          >
-                            <polyline points="6,9 12,15 18,9"/>
-                          </svg>
-                        </button>
-                        <div className={`job-description ${expandedJob === 'job1' ? 'expanded' : ''}`}>
-                          <ul>
-                            <li>Joined the design team at Dynamic Active - a AI driven tech startup focused on providing learning management systems</li>
-                            <li>Created the logo along with logo animations utilizing HTML, CSS, and React aligning visuals with branding objectives</li>
-                            <li>Conducted iterative usability tests and refined background visuals, enhancing overall engagement and satisfaction</li>
-                            <li>Worked closely with engineers and stake holders to ensure high-quality implementation</li>
-                          </ul>
-                        </div>
-                      </div>
+          {/* First job commented out - will be added back later
+          <div className="job-item">
+            <button 
+              className="job-title" 
+              onClick={() => toggleJob('job1')}
+            >
+              <span>UX Design Intern | 2025</span>
+              <svg 
+                className={`job-arrow ${expandedJob === 'job1' ? 'expanded' : ''}`}
+                width="16" 
+                height="16" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <polyline points="6,9 12,15 18,9"/>
+              </svg>
+            </button>
+            <div className={`job-description ${expandedJob === 'job1' ? 'expanded' : ''}`}>
+              <ul>
+                <li>Joined the design team at Dynamic Active - a AI driven tech startup focused on providing learning management systems</li>
+                <li>Created the logo along with logo animations utilizing HTML, CSS, and React aligning visuals with branding objectives</li>
+                <li>Conducted iterative usability tests and refined background visuals, enhancing overall engagement and satisfaction</li>
+                <li>Worked closely with engineers and stake holders to ensure high-quality implementation</li>
+              </ul>
+            </div>
+          </div>
+          */}
           
           <div className="job-item">
             <button 
