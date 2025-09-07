@@ -1,0 +1,141 @@
+/* UX Club Page */
+.ux-club-page {
+  min-height: 100vh;
+  background-color: #121212;
+  transition: background-color 0.3s ease;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.light-mode .ux-club-page {
+  background-color: #F2F2F2;
+}
+
+.ux-club-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.ux-club-description {
+  font-family: 'Geist Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+  transition: color 0.3s ease;
+}
+
+body.light-mode .ux-club-description {
+  color: #121212;
+}
+
+/* See Website Button */
+.see-website-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 1rem 2rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.see-website-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+body.light-mode .see-website-btn {
+  color: #121212;
+  border-color: #121212;
+}
+
+body.light-mode .see-website-btn:hover {
+  background-color: rgba(18, 18, 18, 0.1);
+  box-shadow: 0 0 20px rgba(18, 18, 18, 0.3);
+}
+
+/* Arrow Container */
+.arrow-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow-out {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.arrow-in {
+  opacity: 0;
+  transform: translateX(-8px) translateY(8px);
+}
+
+.see-website-btn:hover .arrow-out {
+  opacity: 0;
+  transform: translateX(8px) translateY(-8px);
+}
+
+.see-website-btn:hover .arrow-in {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ux-club-page {
+    padding: 30px;
+  }
+  
+  .ux-club-content {
+    gap: 2.5rem;
+  }
+  
+  .ux-club-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ux-club-page {
+    padding: 20px;
+  }
+  
+  .ux-club-content {
+    gap: 2rem;
+  }
+  
+  .ux-club-description {
+    font-size: 15px;
+  }
+  
+  .see-website-btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 15px;
+  }
+}
