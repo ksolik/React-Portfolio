@@ -46,7 +46,7 @@ const About = () => {
             
             <div className="about-resume-section">
               <BlurIn delay={1.2}>
-                <a href={require('../assets/images/ResumeBEST.pdf')} target="_blank" rel="noopener noreferrer" className="resume-btn">
+                <a href={require('../assets/images/ResumeUX.pdf')} target="_blank" rel="noopener noreferrer" className="resume-btn">
                   Resume
                   <div className="arrow-container">
                     <svg 

@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Project2.css';
+import { BlurIn } from './BlurIn';
 
 const Project2 = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [currentJourney, setCurrentJourney] = useState(0);
   const [currentWireframe, setCurrentWireframe] = useState(0);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const personaImages = [
     require('../assets/images/fun/P1.png'),
@@ -40,55 +46,63 @@ const Project2 = () => {
 
   return (
     <div className="project2-page">
-      <section className="project2-hero">
-        <div className="project2-content">
+      <BlurIn>
+        <section className="project2-hero">
+          <div className="project2-content">
           <div className="project2-gif">
-            {/* Placeholder for gif - can be replaced with actual gif later */}
-            <div className="gif-placeholder">
-              <span>GIF Placeholder</span>
+            <img 
+              src={require('../assets/images/projects/Intro.gif')} 
+              alt="Leopold's App Introduction" 
+              className="project-gif"
+            />
+          </div>
+            <div className="project2-text">
+              <h1 className="project2-title">Leopolds</h1>
+              <p className="project2-description">
+                Leopold's Application is a mobile ordering app I designed for a local café, bookstore, and bar in Madison, WI as part of my undergraduate UX course. The app allows customers to pre-order drinks, choose pickup or delivery, and even reserve a seat—creating a smooth, intuitive experience that caters to Leopold's diverse community of patrons.
+              </p>
+              <div className="project2-details">
+                <div className="detail-item">
+                  <span className="detail-label">Project type:</span>
+                  <span className="detail-value">End-to-End Mobile Application</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">Roles:</span>
+                  <span className="detail-value">Sole UX/UI Designer</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">Industry:</span>
+                  <span className="detail-value">Food</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">Tools:</span>
+                  <span className="detail-value">Figma, Illustrator, FigJam</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">Duration:</span>
+                  <span className="detail-value">September 2024 – November 2024 (12 weeks)</span>
+                </div>
+              </div>
+              <a 
+                href="https://www.figma.com/proto/kx1N6O98Xh8PkqxK00BLpN/LEOPOLDS-CASE-FOR-PORTFOLIO?page-id=297%3A19530&node-id=684-6281&viewport=692%2C376%2C0.09&t=6UgO7obxGnM6A2Qh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=684%3A6281" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="prototype-btn"
+              >
+                View Prototype
+                <div className="arrow-container">
+                  <svg className="arrow-icon arrow-out" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                  <svg className="arrow-icon arrow-in" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
-          <div className="project2-text">
-            <h1 className="project2-title">Leopolds</h1>
-            <p className="project2-description">
-              Leopold's Application is a mobile ordering app I designed for a local café, bookstore, and bar in Madison, WI as part of my undergraduate UX course. The app allows customers to pre-order drinks, choose pickup or delivery, and even reserve a seat—creating a smooth, intuitive experience that caters to Leopold's diverse community of patrons.
-            </p>
-            <div className="project2-details">
-              <div className="detail-item">
-                <span className="detail-label">Project type:</span>
-                <span className="detail-value">End-to-End Mobile Application</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Roles:</span>
-                <span className="detail-value">Sole UX/UI Designer</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Industry:</span>
-                <span className="detail-value">Food</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Tools:</span>
-                <span className="detail-value">Figma, Illustrator, FigJam</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Duration:</span>
-                <span className="detail-value">September 2024 – November 2024 (12 weeks)</span>
-              </div>
-            </div>
-            <a href="#" className="prototype-btn">
-              View Prototype
-              <div className="arrow-container">
-                <svg className="arrow-icon arrow-out" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-                <svg className="arrow-icon arrow-in" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </BlurIn>
 
       <section className="project2-problem-goal">
         <div className="project2-problem-goal-content">
@@ -108,7 +122,7 @@ const Project2 = () => {
         </div>
         
         <div className="jump-to-process-section">
-          <a href="#" className="jump-to-process-btn">
+          <a href="#research-section" className="jump-to-process-btn">
             Jump to Process
             <div className="arrow-container">
               <svg className="arrow-icon arrow-out" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -173,7 +187,7 @@ const Project2 = () => {
         </div>
       </section>
 
-      <section className="insights-section">
+      <section id="research-section" className="insights-section">
         <div className="insights-content">
           <div className="insights-number">01 Research</div>
           <h2 className="insights-title">User Interviews & Insights</h2>
@@ -374,6 +388,68 @@ const Project2 = () => {
       <section className="insights-section">
         <div className="insights-content">
           <div className="insights-number">04 Design</div>
+          <h2 className="insights-title">High-Fidelity Design</h2>
+          <p className="insights-description">
+            Based on insights from user testing, we redesigned the menu screen from a grid layout to a horizontally scrolling row for a more intuitive browsing experience. We also simplified the table reservation process by making it a two-step flow with an easier seat selection feature. Additionally, we streamlined the navigation bar by removing the Rewards icon and integrating rewards access directly into the home page.
+          </p>
+        </div>
+      </section>
+
+      <section className="persona-image-section no-border">
+        <div className="persona-image-container">
+          <div className="high-fidelity-grid">
+            <div className="grid-item">
+              <img 
+                src={require('../assets/images/projects/H.png')} 
+                alt="High-Fidelity Design 1" 
+                className="grid-image"
+              />
+            </div>
+            <div className="grid-item">
+              <img 
+                src={require('../assets/images/projects/M.png')} 
+                alt="High-Fidelity Design 2" 
+                className="grid-image"
+              />
+            </div>
+            <div className="grid-item">
+              <img 
+                src={require('../assets/images/projects/T.png')} 
+                alt="High-Fidelity Design 3" 
+                className="grid-image"
+              />
+            </div>
+            <div className="grid-item">
+              <img 
+                src={require('../assets/images/projects/T2.png')} 
+                alt="High-Fidelity Design 4" 
+                className="grid-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="insights-section no-border">
+        <div className="insights-content">
+          <h2 className="insights-title">Final User Tests</h2>
+          <p className="insights-description">
+            The final round of user testing highlighted one major issue: the table reservations feature. Users found the process too slow and expressed frustration with the cluttered date system. They also felt selecting the number of guests was unnecessary, and that choosing dates through a calendar created complications for the café.
+          </p>
+        </div>
+      </section>
+
+      <section className="insights-section">
+        <div className="insights-content">
+          <div className="insights-number">05 Final Prototype</div>
+          <h2 className="insights-title">Simple is better</h2>
+          <p className="insights-description">
+            I changed the reservation feature into a single page where users could only select a same-day time slot limited to one hour. This ultimately making the the table reservation feature simple and easy to use for the users.
+          </p>
+          <h2 className="insights-title">The UI</h2>
+          <p className="insights-description">
+            In the final design, I refined the spacing and alignment by applying the 8px grid rule for consistency. I also updated the navigation bar to a cleaner, more modern style, giving the interface a sharper and more polished look.
+          </p>
         </div>
       </section>
     </div>
