@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.9dd9daa7.css",
-    "main.js": "/static/js/main.e1fb33e2.js",
+    "main.css": "/static/css/main.532da7b6.css",
+    "main.js": "/static/js/main.b13c5a5b.js",
+    "static/media/Intro.gif": "/static/media/Intro.c0d040e6ae118e65c005.gif",
     "static/media/Loc.png": "/static/media/Loc.340cbfff385a04f88225.png",
     "static/media/fun3.jpeg": "/static/media/fun3.399e9ddd9702a30ab0f4.jpeg",
     "static/media/Leo.png": "/static/media/Leo.4b92e990517a7a0d5a32.png",
@@ -15,9 +16,11 @@
     "static/media/DuneInfo.jpeg": "/static/media/DuneInfo.30bba05c3836df178a0c.jpeg",
     "static/media/ImagineFX.png": "/static/media/ImagineFX.63e36ac5f302cc9853b8.png",
     "static/media/Tak.png": "/static/media/Tak.0fbec11af744ef37ba77.png",
-    "static/media/ResumeBEST.pdf": "/static/media/ResumeBEST.422a6c088f999548697c.pdf",
+    "static/media/ResumeUX.pdf": "/static/media/ResumeUX.6f727e1a514c10fc1860.pdf",
     "static/media/S.png": "/static/media/S.aa2887825179796b22aa.png",
     "static/media/Robo.jpeg": "/static/media/Robo.26d81c9aadbea1be9448.jpeg",
+    "static/media/M.png": "/static/media/M.0c7330a3d82e25af397e.png",
+    "static/media/H.png": "/static/media/H.47f90762e3cc71c7b58d.png",
     "static/media/fun1.jpeg": "/static/media/fun1.39b8bfd6e62f0b75c515.jpeg",
     "static/media/P1.png": "/static/media/P1.73edb969ca0a6dded24c.png",
     "static/media/UF.png": "/static/media/UF.34faf5423d285e63801e.png",
@@ -38,15 +41,17 @@
     "static/media/Rep.png": "/static/media/Rep.916a81ba44993e60b691.png",
     "static/media/R2.png": "/static/media/R2.7bb6e90260b354593230.png",
     "static/media/Fire.jpeg": "/static/media/Fire.d7890629c3520f89548d.jpeg",
+    "static/media/T.png": "/static/media/T.ff4854aec812295772ee.png",
+    "static/media/T2.png": "/static/media/T2.1e4cdb994cad9f228c76.png",
     "static/media/R1.png": "/static/media/R1.5c796bcc3472d34a8fbd.png",
     "static/media/Eren.png": "/static/media/Eren.ebd4c8b1b36281379f6e.png",
     "static/media/glad.png": "/static/media/glad.f735a275a347ac948b93.png",
     "index.html": "/index.html",
-    "main.9dd9daa7.css.map": "/static/css/main.9dd9daa7.css.map",
-    "main.e1fb33e2.js.map": "/static/js/main.e1fb33e2.js.map"
+    "main.532da7b6.css.map": "/static/css/main.532da7b6.css.map",
+    "main.b13c5a5b.js.map": "/static/js/main.b13c5a5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.9dd9daa7.css",
-    "static/js/main.e1fb33e2.js"
+    "static/css/main.532da7b6.css",
+    "static/js/main.b13c5a5b.js"
   ]
 }
