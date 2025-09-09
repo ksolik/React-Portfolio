@@ -11,6 +11,53 @@ const Project2 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Counter animation effect
+  useEffect(() => {
+    const animateCounters = () => {
+      const counters = document.querySelectorAll('.stat-number');
+      
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const updateCounter = () => {
+          if (current < target) {
+            current += increment;
+            counter.textContent = Math.floor(current) + '%';
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target + '%';
+          }
+        };
+        
+        updateCounter();
+      });
+    };
+
+    // Use Intersection Observer to trigger animation when stats come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const statsContainer = document.querySelector('.stats-container');
+    if (statsContainer) {
+      observer.observe(statsContainer);
+    }
+
+    return () => {
+      if (statsContainer) {
+        observer.unobserve(statsContainer);
+      }
+    };
+  }, []);
   
   const personaImages = [
     require('../assets/images/fun/P1.png'),
@@ -54,6 +101,7 @@ const Project2 = () => {
               src={require('../assets/images/projects/Intro.gif')} 
               alt="Leopold's App Introduction" 
               className="project-gif"
+              loading="lazy"
             />
           </div>
             <div className="project2-text">
@@ -84,7 +132,7 @@ const Project2 = () => {
                 </div>
               </div>
               <a 
-                href="https://www.figma.com/proto/kx1N6O98Xh8PkqxK00BLpN/LEOPOLDS-CASE-FOR-PORTFOLIO?page-id=297%3A19530&node-id=684-6281&viewport=692%2C376%2C0.09&t=6UgO7obxGnM6A2Qh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=684%3A6281" 
+                href="https://www.figma.com/proto/kx1N6O98Xh8PkqxK00BLpN/LEOPOLDS-CASE-FOR-PORTFOLIO?page-id=297%3A19530&node-id=684-6281&p=f&viewport=917%2C388%2C0.13&t=zwX3GbUPvHOoWyeC-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=684%3A6281" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="prototype-btn"
@@ -146,9 +194,12 @@ const Project2 = () => {
             </p>
           </div>
           <div className="process-gif">
-            <div className="gif-placeholder">
-              <span>Process GIF 01</span>
-            </div>
+            <img 
+              src={require('../assets/images/projects/Home.gif')} 
+              alt="Home Screen Process" 
+              className="process-gif-image"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -163,9 +214,12 @@ const Project2 = () => {
             </p>
           </div>
           <div className="process-gif">
-            <div className="gif-placeholder">
-              <span>Process GIF 02</span>
-            </div>
+            <img 
+              src={require('../assets/images/projects/Order.gif')} 
+              alt="Order Process" 
+              className="process-gif-image"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -180,9 +234,12 @@ const Project2 = () => {
             </p>
           </div>
           <div className="process-gif">
-            <div className="gif-placeholder">
-              <span>Process GIF 03</span>
-            </div>
+            <img 
+              src={require('../assets/images/projects/Table.gif')} 
+              alt="Table Reservation Process" 
+              className="process-gif-image"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -441,14 +498,61 @@ const Project2 = () => {
 
       <section className="insights-section">
         <div className="insights-content">
-          <div className="insights-number">05 Final Prototype</div>
+          <div className="insights-number">05 Outcome</div>
           <h2 className="insights-title">Simple is better</h2>
           <p className="insights-description">
             I changed the reservation feature into a single page where users could only select a same-day time slot limited to one hour. This ultimately making the the table reservation feature simple and easy to use for the users.
           </p>
+          <div className="prototype-grid">
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P1.png')} alt="Prototype 1" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P2.png')} alt="Prototype 2" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P10.png')} alt="Prototype 10" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P4.png')} alt="Prototype 4" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P6.png')} alt="Prototype 6" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P7.png')} alt="Prototype 7" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P8.png')} alt="Prototype 8" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P9.png')} alt="Prototype 9" className="prototype-image" />
+            </div>
+            <div className="prototype-item">
+              <img src={require('../assets/images/projects/P3.png')} alt="Prototype 3" className="prototype-image" />
+            </div>
+          </div>
           <h2 className="insights-title">The UI</h2>
           <p className="insights-description">
             In the final design, I refined the spacing and alignment by applying the 8px grid rule for consistency. I also updated the navigation bar to a cleaner, more modern style, giving the interface a sharper and more polished look.
+          </p>
+          <h2 className="insights-title">The Result</h2>
+          <p className="insights-description">
+            Final testing showed all participants completed tasks successfully, with fewer clicks needed in the workflow. The solution also improved accessibility by aligning with WCAG guidelines.
+          </p>
+          <div className="stats-container">
+            <div className="stat-box">
+              <div className="stat-number" data-target="100">0%</div>
+              <div className="stat-label">Task Completion Rate</div>
+            </div>
+            <div className="stat-box">
+              <div className="stat-number" data-target="20">0%</div>
+              <div className="stat-label">Reduction in Clicks</div>
+            </div>
+          </div>
+          <h2 className="insights-title">What I learned</h2>
+          <p className="insights-description">
+            What I took away from this project is that if I had done better research on table reservation screens at the start, it would have saved me a lot of time later when I was refining them. I also came to realize how much I would have benefited from working with others. Having more voices and ideas during the wireframing stage could have made the reservation process stronger and easier to design.
           </p>
         </div>
       </section>
