@@ -1,11 +1,14 @@
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   padding: 2rem 40px;
-  background-color: #121212;
+  background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
 body.light-mode .navbar {
-  background-color: #F2F2F2;
+  background-color: transparent;
 }
 
 .navbar-content {
@@ -20,16 +23,46 @@ body.light-mode .navbar {
 
 
 .logo {
-  font-size: 14px;
-  font-weight: 400;
-  color: #ffffff;
+  display: flex;
+  align-items: center;
   margin: 0;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
   text-decoration: none;
 }
 
-body.light-mode .logo {
+.logo-image {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.05);
+}
+
+body.light-mode .logo-image {
+  filter: invert(1);
+}
+
+/* Project2 page specific navbar styles */
+.project2-page .logo {
   color: #121212;
+}
+
+.project2-page .logo-image {
+  filter: invert(0) brightness(0);
+}
+
+.project2-page .nav-link {
+  color: #121212;
+}
+
+.project2-page .nav-link:hover {
+  color: #333333;
+}
+
+.project2-page .hamburger-line {
+  background-color: #121212;
 }
 
 .nav-links {

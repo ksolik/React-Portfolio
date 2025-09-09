@@ -89,7 +89,7 @@ body.light-mode .fun-section-title:hover {
 }
 
 .fun-image-grid.expanded {
-  max-height: 2000px; /* Increased to show all images */
+  max-height: 5000px; /* Increased to show all images */
 }
 
 body.light-mode .fun-image-grid {
@@ -138,6 +138,16 @@ body.light-mode .fun-image-grid {
   .image-item {
     width: calc(50% - 0px);
   }
+  
+  .image-item img {
+    max-width: 80%; /* Make images smaller on mobile */
+    height: auto;
+    margin: 0 auto; /* Center the smaller images */
+  }
+  
+  .fun-image-grid.expanded {
+    max-height: 15000px; /* Increased height for mobile dropdowns to show all images */
+  }
 }
 
 @media (max-width: 480px) {
@@ -152,5 +162,15 @@ body.light-mode .fun-image-grid {
   
   .image-item {
     width: calc(100% - 0px);
+  }
+  
+  .image-item img {
+    max-width: 70%; /* Even smaller images on smallest screens */
+    height: auto;
+    margin: 0 auto; /* Center the smaller images */
+  }
+  
+  .fun-image-grid.expanded {
+    max-height: 20000px; /* Maximum height for smallest screens with vertical stacking */
   }
 }

@@ -1,9 +1,15 @@
 .App {
   text-align: center;
   font-family: 'Geist Mono', monospace;
-  background-color: #000;
+  background-color: #121212;
   color: #fff;
   min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode .App {
+  background-color: #F2F2F2;
+  color: #121212;
 }
 
 * {
@@ -18,7 +24,24 @@ html {
 
 body {
   font-family: 'Geist Mono', monospace;
-  background-color: #000;
+  background-color: #121212;
   color: #fff;
   overflow-x: hidden;
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: #F2F2F2;
+  color: #121212;
+}
+
+/* Project2 page specific styles */
+.App.project2-page {
+  background-color: #E9E9E9;
+  color: #121212;
+}
+
+body.light-mode .App.project2-page {
+  background-color: #E9E9E9;
+  color: #121212;
 }

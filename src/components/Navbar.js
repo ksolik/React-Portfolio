@@ -9,17 +9,24 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    setIsMenuOpen(false); // Close mobile menu when navigating
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
-        <Link to="/" className="logo">Kai Solik</Link>
+        <Link to="/" className="logo" onClick={scrollToTop}>
+          <img src={require('../assets/images/icons/KaiNav.png')} alt="Kai Solik" className="logo-image" />
+        </Link>
         
         {/* Desktop Navigation */}
         <div className="nav-links">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/fun" className="nav-link">Fun</Link>
-          <a href="#contact" className="nav-link">Contact</a>
+          <Link to="/" className="nav-link" onClick={scrollToTop}>Home</Link>
+          <Link to="/about" className="nav-link" onClick={scrollToTop}>About</Link>
+          <Link to="/fun" className="nav-link" onClick={scrollToTop}>Fun</Link>
+          <a href="#contact" className="nav-link" onClick={scrollToTop}>Contact</a>
         </div>
 
         {/* Mobile Hamburger Menu */}
@@ -31,10 +38,10 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
-          <Link to="/" className="mobile-nav-link" onClick={toggleMenu}>Home</Link>
-          <Link to="/about" className="mobile-nav-link" onClick={toggleMenu}>About</Link>
-          <Link to="/fun" className="mobile-nav-link" onClick={toggleMenu}>Fun</Link>
-          <a href="#contact" className="mobile-nav-link" onClick={toggleMenu}>Contact</a>
+          <Link to="/" className="mobile-nav-link" onClick={scrollToTop}>Home</Link>
+          <Link to="/about" className="mobile-nav-link" onClick={scrollToTop}>About</Link>
+          <Link to="/fun" className="mobile-nav-link" onClick={scrollToTop}>Fun</Link>
+          <a href="#contact" className="mobile-nav-link" onClick={scrollToTop}>Contact</a>
         </div>
       </div>
     </nav>
