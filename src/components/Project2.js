@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Project2.css';
 import { BlurIn } from './BlurIn';
 
@@ -6,10 +6,55 @@ const Project2 = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [currentJourney, setCurrentJourney] = useState(0);
   const [currentWireframe, setCurrentWireframe] = useState(0);
+  
+  // Refs for scroll animations
+  const processSectionRef = useRef(null);
+  const insightsSectionRef = useRef(null);
+  const personaSectionRef = useRef(null);
+  const wireframeSectionRef = useRef(null);
+  const prototypeSectionRef = useRef(null);
 
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  // Scroll animations
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections for scroll animations
+    const sections = document.querySelectorAll('.process-section, .insights-section, .persona-image-section');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Parallax effect for hero section
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset;
+      const heroGif = document.querySelector('.project-gif');
+      if (heroGif) {
+        heroGif.style.transform = `translateY(${scrolled * 0.1}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   // Counter animation effect
@@ -184,13 +229,12 @@ const Project2 = () => {
         </div>
       </section>
 
-      <section className="process-section">
+      <section className="process-section" ref={processSectionRef}>
         <div className="process-content">
           <div className="process-text">
-            <div className="process-number">01</div>
-            <h2 className="process-title">Research & Discovery</h2>
+            <h2 className="process-title">Home Page</h2>
             <p className="process-description">
-              Conducted user interviews and competitive analysis to understand the needs of college students and café visitors. Analyzed existing ordering systems and identified pain points in the current experience.
+              The home page includes a rewards system to boost user engagement, inspired by insights from research and interviews.
             </p>
           </div>
           <div className="process-gif">
@@ -203,14 +247,12 @@ const Project2 = () => {
           </div>
         </div>
       </section>
-
       <section className="process-section">
         <div className="process-content">
           <div className="process-text">
-            <div className="process-number">02</div>
-            <h2 className="process-title">Design & Prototyping</h2>
+            <h2 className="process-title">Order/Menu</h2>
             <p className="process-description">
-              Created wireframes and high-fidelity prototypes focusing on intuitive navigation and clear information hierarchy. Developed user flows for ordering and table reservation features.
+              The order page was designed to minimize clicks, enabling users to quickly find and order their desired drink with the help of a search feature.
             </p>
           </div>
           <div className="process-gif">
@@ -223,14 +265,12 @@ const Project2 = () => {
           </div>
         </div>
       </section>
-
       <section className="process-section">
         <div className="process-content">
           <div className="process-text">
-            <div className="process-number">03</div>
-            <h2 className="process-title">Testing & Iteration</h2>
+            <h2 className="process-title">Table Reservation Feature</h2>
             <p className="process-description">
-              Conducted usability testing with target users and iterated on the design based on feedback. Refined the interface to ensure optimal user experience and accessibility.
+              The table reservation feature was thoroughly researched and tested to be as simple and easy as possible, again with the goal to minimize clicks.
             </p>
           </div>
           <div className="process-gif">
@@ -243,7 +283,6 @@ const Project2 = () => {
           </div>
         </div>
       </section>
-
       <section id="research-section" className="insights-section">
         <div className="insights-content">
           <div className="insights-number">01 Research</div>
@@ -542,7 +581,7 @@ const Project2 = () => {
           </p>
           <div className="stats-container">
             <div className="stat-box">
-              <div className="stat-number" data-target="100">0%</div>
+              <div className="stat-number" data-target="90">0%</div>
               <div className="stat-label">Task Completion Rate</div>
             </div>
             <div className="stat-box">

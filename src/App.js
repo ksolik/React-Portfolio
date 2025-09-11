@@ -7,6 +7,7 @@ import About from './components/About';
 import Fun from './components/Fun';
 import UXClub from './components/UXClub';
 import Project2 from './components/Project2';
+import Project3 from './components/Project3';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import './App.css';
@@ -30,6 +31,7 @@ function AppContent() {
         <Route path="/fun" element={<Fun />} />
         <Route path="/ux-club" element={<UXClub />} />
         <Route path="/project2" element={<Project2 />} />
+        <Route path="/project3" element={<Project3 />} />
       </Routes>
       <Footer />
     </div>

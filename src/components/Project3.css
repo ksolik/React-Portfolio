@@ -1,0 +1,576 @@
+/* Project 3 Page Styles */
+.project3-page {
+  min-height: 100vh;
+  background-color: #E9E9E9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.project3-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 40px;
+}
+
+.project3-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.project3-gif {
+  flex: 1;
+  max-width: 500px;
+}
+
+.project-gif {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  max-width: 350px;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.project3-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.project3-title {
+  font-size: 60px;
+  font-weight: 300;
+  font-family: 'Geist', sans-serif;
+  color: #000000;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+/* Safari-specific font size adjustments */
+@supports (-webkit-appearance: none) {
+  .project3-title {
+    font-size: 62px;
+  }
+  
+  .project3-description {
+    font-size: 17px;
+  }
+  
+  .detail-label,
+  .detail-value {
+    font-size: 17px;
+  }
+  
+  .section-title {
+    font-size: 34px;
+  }
+  
+  .section-description {
+    font-size: 17px;
+  }
+}
+
+.project3-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Geist Mono', monospace;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.project3-details {
+  margin-bottom: 3rem;
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.detail-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  min-width: 120px;
+  margin-right: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.detail-value {
+  font-family: 'Geist Mono', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  flex: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.prototype-btn {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.prototype-btn:hover {
+  background-color: #000000;
+  color: #E9E9E9;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+  position: absolute;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow-out {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.arrow-in {
+  opacity: 0;
+  transform: translate(-20px, 20px);
+}
+
+.prototype-btn:hover .arrow-out {
+  opacity: 0;
+  transform: translate(20px, -20px);
+}
+
+.prototype-btn:hover .arrow-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Problem Statement and Goal Section */
+.project3-problem-goal {
+  padding: 4rem 40px;
+  background-color: #E9E9E9;
+  border-top: 2px solid #000000;
+}
+
+.project3-problem-goal-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.problem-section,
+.goal-section {
+  flex: 1;
+  max-width: none;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 300;
+  font-family: 'Geist', sans-serif;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.section-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Geist Mono', monospace;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+/* Jump to Process Button */
+.jump-to-process-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  position: relative;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.jump-to-process-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000000;
+}
+
+.jump-to-process-btn {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jump-to-process-btn:hover {
+  background-color: #000000;
+  color: #E9E9E9;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Process Sections */
+.process-section {
+  padding: 4rem 40px;
+  background-color: #E9E9E9;
+}
+
+.process-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.process-text {
+  flex: 0.7;
+  max-width: 450px;
+}
+
+.process-gif {
+  flex: 0.8;
+  max-width: 300px;
+}
+
+.process-title {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Geist', sans-serif;
+  color: #000000;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.process-description {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Geist Mono', monospace;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.process-gif-image {
+  width: 350px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 30px;
+  display: block;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Insights Section */
+.insights-section {
+  padding: 4rem 40px;
+  background-color: #E9E9E9;
+  border-top: 2px solid #000000;
+}
+
+.insights-section.no-border {
+  border-top: none;
+  padding-top: 1rem;
+}
+
+.insights-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.insights-number {
+  font-size: 48px;
+  font-weight: 300;
+  font-family: 'Geist', sans-serif;
+  color: #000000;
+  margin-bottom: 4rem;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.insights-title {
+  font-size: 32px;
+  font-weight: 300;
+  font-family: 'Geist', sans-serif;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.insights-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Geist Mono', monospace;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+.insights-description:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project3-hero {
+    padding: 4rem 30px;
+  }
+  
+  .project3-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .project3-gif {
+    max-width: 100%;
+  }
+  
+  .project3-title {
+    font-size: 48px;
+  }
+  
+  .project3-description {
+    font-size: 16px;
+  }
+  
+  .detail-label {
+    font-size: 16px;
+  }
+  
+  .detail-value {
+    font-size: 16px;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .detail-label {
+    min-width: auto;
+    margin-right: 0;
+  }
+  
+  .project3-problem-goal {
+    padding: 4rem 30px;
+  }
+  
+  .project3-problem-goal-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .process-section {
+    padding: 4rem 30px;
+  }
+  
+  .process-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .process-gif {
+    max-width: 100%;
+  }
+  
+  .process-title {
+    font-size: 22px;
+  }
+  
+  .process-description {
+    font-size: 13px;
+  }
+  
+  .insights-section {
+    padding: 4rem 30px;
+  }
+  
+  .insights-number {
+    font-size: 40px;
+  }
+  
+  .insights-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project3-hero {
+    padding: 4rem 20px;
+  }
+  
+  .project3-title {
+    font-size: 40px;
+  }
+  
+  .project3-description {
+    font-size: 16px;
+  }
+  
+  .detail-label {
+    font-size: 16px;
+  }
+  
+  .detail-value {
+    font-size: 16px;
+  }
+  
+  .prototype-btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .project3-problem-goal {
+    padding: 4rem 20px;
+  }
+  
+  .project3-problem-goal-content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .process-section {
+    padding: 4rem 20px;
+  }
+  
+  .process-content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .process-title {
+    font-size: 20px;
+  }
+  
+  .process-description {
+    font-size: 12px;
+  }
+  
+  .insights-section {
+    padding: 4rem 20px;
+  }
+  
+  .insights-number {
+    font-size: 36px;
+  }
+  
+  .insights-title {
+    font-size: 24px;
+  }
+}
+
+/* Responsive adjustments for GIFs */
+@media (max-width: 768px) {
+  .project-gif {
+    max-width: 250px;
+  }
+  
+  .process-gif-image {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-gif {
+    max-width: 200px;
+  }
+  
+  .process-gif-image {
+    width: 200px;
+  }
+}

@@ -93,7 +93,7 @@ const Projects = () => {
           </FadeUp>
           
           <FadeUp delay={0.3}>
-            <div className="project-card project-3">
+            <Link to="/project3" className="project-card project-3">
               <img 
                 src={takImage} 
                 alt="Tak Project" 
@@ -107,7 +107,7 @@ const Projects = () => {
                   <div className="project-date">2024</div>
                 </div>
               </div>
-            </div>
+            </Link>
           </FadeUp>
           
           <FadeUp delay={0.4}>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import './CustomCursor.css';
 
 const CustomCursor = () => {
@@ -8,6 +9,10 @@ const CustomCursor = () => {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const animationFrameRef = useRef();
   const cursorRef = useRef();
+  const location = useLocation();
+  
+  // Check if we're on a project page
+  const isProjectPage = location.pathname.includes('/project');
 
   // Throttled cursor update using requestAnimationFrame for smoother performance
   const updateCursor = useCallback((e) => {
@@ -88,7 +93,7 @@ const CustomCursor = () => {
 
   return (
     <div 
-      className={`custom-cursor ${isHovering ? 'hovering' : ''} ${isProjectHovering ? 'project-hovering' : ''}`}
+      className={`custom-cursor ${isHovering ? 'hovering' : ''} ${isProjectHovering ? 'project-hovering' : ''} ${isProjectPage ? 'project-page' : ''}`}
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
