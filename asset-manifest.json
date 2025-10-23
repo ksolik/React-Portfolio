@@ -1,14 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.4ab2bd7b.css",
-    "main.js": "/static/js/main.bbc540f0.js",
+    "main.js": "/static/js/main.bad36086.js",
     "static/media/Intro.gif": "/static/media/Intro.c0d040e6ae118e65c005.gif",
     "static/media/Order.gif": "/static/media/Order.f6e4fafb7b2d15673950.gif",
+    "static/media/1.mov": "/static/media/1.5683888931c634891762.mov",
     "static/media/Home.gif": "/static/media/Home.46de36a046754a7156a3.gif",
+    "static/media/3.mov": "/static/media/3.9eee1e6b597b655b17c9.mov",
     "static/media/Loc.png": "/static/media/Loc.340cbfff385a04f88225.png",
     "static/media/Tak.png": "/static/media/Tak.6f32bd259f854f2631a6.png",
     "static/media/AS.png": "/static/media/AS.a2f9fa381b37d0ba7ce5.png",
     "static/media/Table.gif": "/static/media/Table.1993a446e528b109aa32.gif",
+    "static/media/2.mov": "/static/media/2.1923a2bbe24f396fa715.mov",
     "static/media/fun3.jpeg": "/static/media/fun3.399e9ddd9702a30ab0f4.jpeg",
     "static/media/Leo.png": "/static/media/Leo.4b92e990517a7a0d5a32.png",
     "static/media/WIsconsinInfo.png": "/static/media/WIsconsinInfo.2906a40d09e6b121a3ce.png",
@@ -43,8 +46,6 @@
     "static/media/P8.png": "/static/media/P8.99bba33159ea4a7f4535.png",
     "static/media/P4.png": "/static/media/P4.3bf2caa0f438d4651070.png",
     "static/media/P7.png": "/static/media/P7.8e40490da632594b7c6a.png",
-    "static/media/Shot.gif": "/static/media/Shot.97a08e1a5c397d54feec.gif",
-    "static/media/Tak.gif": "/static/media/Tak.881eac2c616ae6a8897b.gif",
     "static/media/bd.jpg": "/static/media/bd.95bc13441425195fdaaa.jpg",
     "static/media/U2.png": "/static/media/U2.28f7022e5910b82e7f12.png",
     "static/media/IA.png": "/static/media/IA.25e238a1ce3abaa65d89.png",
@@ -60,7 +61,6 @@
     "static/media/w3.png": "/static/media/w3.66ba4cddbcc3d7f57b69.png",
     "static/media/w2.png": "/static/media/w2.f2ede6ea692a7839681c.png",
     "static/media/w1.png": "/static/media/w1.8522924a973c22e1632d.png",
-    "static/media/Iron.gif": "/static/media/Iron.2d8499532aab5069ada4.gif",
     "static/media/P10.png": "/static/media/P10.846943b30329e8e04e13.png",
     "static/media/P3.png": "/static/media/P3.ba4d28ed78568d5bac93.png",
     "static/media/Rep.png": "/static/media/Rep.916a81ba44993e60b691.png",
@@ -75,10 +75,10 @@
     "static/media/KaiNav.png": "/static/media/KaiNav.38ff614ca768cba30d5c.png",
     "index.html": "/index.html",
     "main.4ab2bd7b.css.map": "/static/css/main.4ab2bd7b.css.map",
-    "main.bbc540f0.js.map": "/static/js/main.bbc540f0.js.map"
+    "main.bad36086.js.map": "/static/js/main.bad36086.js.map"
   },
   "entrypoints": [
     "static/css/main.4ab2bd7b.css",
-    "static/js/main.bbc540f0.js"
+    "static/js/main.bad36086.js"
   ]
 }
