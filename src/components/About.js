@@ -89,13 +89,12 @@ const About = () => {
       
       <section className="jobs-section">
         <div className="experience-list">
-          {/* First job commented out - will be added back later
           <div className="job-item">
             <button 
               className="job-title" 
               onClick={() => toggleJob('job1')}
             >
-              <span>UX Design Intern | 2025</span>
+              <span>UI/UX Lead Designer Intern | Sentari AI | 2025</span>
               <svg 
                 className={`job-arrow ${expandedJob === 'job1' ? 'expanded' : ''}`}
                 width="16" 
@@ -112,21 +111,20 @@ const About = () => {
             </button>
             <div className={`job-description ${expandedJob === 'job1' ? 'expanded' : ''}`}>
               <ul>
-                <li>Joined the design team at Dynamic Active - a AI driven tech startup focused on providing learning management systems</li>
-                <li>Created the logo along with logo animations utilizing HTML, CSS, and React aligning visuals with branding objectives</li>
-                <li>Conducted iterative usability tests and refined background visuals, enhancing overall engagement and satisfaction</li>
-                <li>Worked closely with engineers and stake holders to ensure high-quality implementation</li>
+                <li>Led the creation of user-centered, visually appealing mobile app interfaces using modern design principles to improve user satisfaction and engagement.</li>
+                <li>Conducted user research and usability testing to better understand user behavior, iterating mobile workflows and visual elements based on feedback for enhanced usability.</li>
+                <li>Produced detailed wireframes and interactive prototypes to map efficient user journeys, test navigation paths, and communicate app concepts to developers and stakeholders.</li>
+                <li>Collaborated closely with the head designer, engineers, and stakeholders to ensure cohesive mobile app experiences aligned with product vision and user needs</li>
               </ul>
             </div>
           </div>
-          */}
           
           <div className="job-item">
             <button 
               className="job-title" 
               onClick={() => toggleJob('job2')}
             >
-              <span>UX Research and Design Intern | 2024</span>
+              <span>UX Research and Design Intern | MarketEQ | 2024</span>
               <svg 
                 className={`job-arrow ${expandedJob === 'job2' ? 'expanded' : ''}`}
                 width="16" 

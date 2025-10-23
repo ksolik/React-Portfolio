@@ -61,6 +61,38 @@
   body.light-mode .hero-title {
     color: #666666;
   }
+
+  .hero-typing-text {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Geist Mono', monospace;
+    color: #ffffff;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+    min-height: 1.4em;
+    text-align: left;
+  }
+
+  body.light-mode .hero-typing-text {
+    color: #121212;
+  }
+
+  .typing-cursor {
+    color: #ffffff;
+    animation: blink 1s infinite;
+  }
+
+  body.light-mode .typing-cursor {
+    color: #121212;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
   
   .resume-btn {
     background-color: transparent;
@@ -249,6 +281,12 @@
     .hero-title {
       font-size: 60px;
     }
+
+    .hero-typing-text {
+      font-size: 16px;
+      margin-left: 0;
+      text-align: center;
+    }
     
     .resume-btn {
       padding: 0.875rem 1.75rem;
@@ -312,6 +350,12 @@
     
     .hero-title {
       font-size: 50px;
+    }
+
+    .hero-typing-text {
+      font-size: 14px;
+      margin-left: 0;
+      text-align: center;
     }
     
     .toggle-switch {

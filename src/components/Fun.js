@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Fun.css';
 import { BlurIn } from './BlurIn';
 
 const Fun = () => {
   const [expandedSection, setExpandedSection] = useState(null);
+  const navigate = useNavigate();
 
   const toggleSection = (sectionId) => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
+  };
+
+  const handleViewUXUI = () => {
+    navigate('/');
+    setTimeout(() => {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
@@ -120,6 +132,43 @@ const Fun = () => {
               <img src={require('../assets/images/fun/Mon.jpeg')} alt="Mon" />
             </div>
           </div>
+        </div>
+
+        {/* View UX/UI Button */}
+        <div className="view-uxui-section">
+          <BlurIn delay={0.6}>
+            <button onClick={handleViewUXUI} className="view-uxui-btn">
+              View UX/UI
+              <div className="arrow-container">
+                <svg 
+                  className="arrow-icon arrow-out" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+                <svg 
+                  className="arrow-icon arrow-in" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+            </button>
+          </BlurIn>
         </div>
       </div>
     </div>

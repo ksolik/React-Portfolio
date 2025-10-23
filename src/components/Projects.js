@@ -10,7 +10,7 @@ import { FadeUp } from './FadeUp';
 
 const Projects = () => {
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <div className="projects-content">
         <div className="resume-section">
           <BlurIn delay={0.6}>
@@ -57,7 +57,7 @@ const Projects = () => {
         
         <div className="projects-grid">
           <FadeUp delay={0.1}>
-            <div className="project-card project-1">
+            <div className="project-card project-1 coming-soon">
               <img 
                 src={repImage} 
                 alt="Rep Project" 
@@ -65,7 +65,8 @@ const Projects = () => {
                 loading="lazy"
               />
               <div className="project-overlay">
-                <div className="project-title">SetReps</div>
+                <div className="project-title">Coming Soon</div>
+                <div className="coming-soon-text">Coming Soon</div>
                 <div className="project-overlay-content">
                   <div className="project-description">Founder, UX Designer, Full Stack Developer</div>
                   <div className="project-date">2025</div>
@@ -93,7 +94,7 @@ const Projects = () => {
           </FadeUp>
           
           <FadeUp delay={0.3}>
-            <Link to="/project3" className="project-card project-3">
+            <Link to="/takomo" className="project-card project-3">
               <img 
                 src={takImage} 
                 alt="Tak Project" 
@@ -131,7 +132,7 @@ const Projects = () => {
         
         <div className="graphic-design-section">
           <Link to="/fun" className="graphic-design-btn">
-            Graphic Design
+            View Graphic Design
             <div className="arrow-container">
               <svg 
                 className="arrow-icon arrow-out" 

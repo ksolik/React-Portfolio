@@ -45,3 +45,25 @@ body.light-mode .App.project2-page {
   background-color: #E9E9E9;
   color: #121212;
 }
+
+/* Project3 page specific styles */
+.App.project3-page {
+  background-color: #E9E9E9;
+  color: #121212;
+}
+
+body.light-mode .App.project3-page {
+  background-color: #E9E9E9;
+  color: #121212;
+}
+
+/* Takomo page specific styles */
+.App.takomo-page {
+  background-color: #E9E9E9;
+  color: #121212;
+}
+
+body.light-mode .App.takomo-page {
+  background-color: #E9E9E9;
+  color: #121212;
+}

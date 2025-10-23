@@ -53,16 +53,61 @@ body.light-mode .logo-image {
   filter: invert(0) brightness(0);
 }
 
+.project2-page .nav-links-container {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .project2-page .nav-link {
-  color: #121212;
+  color: #999999;
+}
+
+.project2-page .nav-link.active {
+  color: #000000;
+}
+
+.project2-page .nav-link.inactive {
+  color: #999999;
 }
 
 .project2-page .nav-link:hover {
-  color: #333333;
+  color: #000000;
+}
+
+.takomo-page .nav-link.active {
+  color: #000000;
+}
+
+.takomo-page .nav-link.inactive {
+  color: #999999;
+}
+
+.takomo-page .nav-link:hover {
+  color: #000000;
 }
 
 .project2-page .hamburger-line {
   background-color: #121212;
+}
+
+.takomo-page .hamburger-line {
+  background-color: #121212;
+}
+
+/* Glass effect container for nav links */
+.nav-links-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .nav-links-container {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .nav-links {
@@ -207,13 +252,29 @@ body.light-mode .mobile-nav-link:hover {
   color: #121212;
 }
 
+.takomo-page .mobile-nav-link.active {
+  color: #121212;
+}
+
+.takomo-page .mobile-nav-link.inactive {
+  color: #666666;
+}
+
+.takomo-page .mobile-nav-link:hover {
+  color: #121212;
+}
+
+.takomo-page .mobile-nav {
+  background-color: #F2F2F2;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     padding: 2rem 30px;
   }
   
-  .nav-links {
+  .nav-links-container {
     display: none;
   }
   

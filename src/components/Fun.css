@@ -74,6 +74,86 @@ body.light-mode .fun-section-title:hover {
   transform: rotate(180deg);
 }
 
+/* View UX/UI Button Section */
+.view-uxui-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.view-uxui-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transform: translateY(0);
+}
+
+.view-uxui-btn:hover {
+  background-color: #ffffff;
+  color: #121212;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.view-uxui-btn .arrow-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-uxui-btn .arrow-icon {
+  position: absolute;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view-uxui-btn .arrow-out {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.view-uxui-btn .arrow-in {
+  opacity: 0;
+  transform: translate(-20px, 20px);
+}
+
+.view-uxui-btn:hover .arrow-out {
+  opacity: 0;
+  transform: translate(20px, -20px);
+}
+
+.view-uxui-btn:hover .arrow-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+body.light-mode .view-uxui-btn {
+  color: #121212;
+  border: 1px solid #121212;
+}
+
+body.light-mode .view-uxui-btn:hover {
+  background-color: #121212;
+  color: #F2F2F2;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
 /* Image Grid */
 .fun-image-grid {
   max-height: 0;
@@ -137,6 +217,10 @@ body.light-mode .fun-image-grid {
   
   .image-item {
     width: calc(50% - 0px);
+  }
+  
+  .illustrations-grid .image-item {
+    width: calc(100% - 0px);
   }
   
   .image-item img {

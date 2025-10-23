@@ -87,6 +87,41 @@ body.light-mode .resume-btn:hover {
   background-color: #ffffff;
   color: #121212;
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.graphic-design-btn .arrow-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphic-design-btn .arrow-icon {
+  position: absolute;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.graphic-design-btn .arrow-out {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.graphic-design-btn .arrow-in {
+  opacity: 0;
+  transform: translate(-20px, 20px);
+}
+
+.graphic-design-btn:hover .arrow-out {
+  opacity: 0;
+  transform: translate(20px, -20px);
+}
+
+.graphic-design-btn:hover .arrow-in {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 body.light-mode .graphic-design-btn {
@@ -254,6 +289,41 @@ body.light-mode .heading-title {
   filter: brightness(0.7);
 }
 
+.coming-soon {
+  cursor: default;
+}
+
+.coming-soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.coming-soon:hover .project-overlay {
+  opacity: 0.8;
+}
+
+.coming-soon:hover .project-image {
+  filter: brightness(0.8);
+}
+
+.coming-soon-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Geist Mono', monospace;
+  margin-top: 0.5rem;
+  opacity: 0;
+  text-align: left;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+}
+
+.coming-soon:hover .coming-soon-text {
+  opacity: 0.8;
+}
+
 .project-title {
   color: #ffffff;
   font-size: 24px;
@@ -286,6 +356,10 @@ body.light-mode .heading-title {
 }
 
 body.light-mode .project-title {
+  color: #ffffff;
+}
+
+body.light-mode .coming-soon-text {
   color: #ffffff;
 }
 
@@ -337,8 +411,10 @@ body.light-mode .project-date {
     font-size: 20px;
   }
   
-  .project-description {
-    font-size: 14px;
+  .coming-soon-text {
+    top: 2.5rem;
+    left: 1.5rem;
+    font-size: 13px;
   }
   
   .project-date {
@@ -376,8 +452,10 @@ body.light-mode .project-date {
     font-size: 18px;
   }
   
-  .project-description {
-    font-size: 13px;
+  .coming-soon-text {
+    top: 2rem;
+    left: 1rem;
+    font-size: 12px;
   }
   
   .project-date {

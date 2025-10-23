@@ -43,7 +43,7 @@ const Project2 = () => {
     // Parallax effect for hero section
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
-      const heroGif = document.querySelector('.project-gif');
+      const heroGif = document.querySelector('.project2-hero-gif');
       if (heroGif) {
         heroGif.style.transform = `translateY(${scrolled * 0.1}px)`;
       }
@@ -145,7 +145,7 @@ const Project2 = () => {
             <img 
               src={require('../assets/images/projects/Intro.gif')} 
               alt="Leopold's App Introduction" 
-              className="project-gif"
+              className="project2-hero-gif"
               loading="lazy"
             />
           </div>
