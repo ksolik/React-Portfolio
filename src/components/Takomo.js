@@ -74,9 +74,12 @@ const Takomo = () => {
         <section className="takomo-hero">
           <div className="takomo-content">
             <div className="takomo-gif-container">
-              <img 
-                src={require('../assets/images/projects/Tak.gif')} 
-                alt="Takomo Project" 
+              <video 
+                src={require('../assets/images/projects/1.mov')} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
                 className="takomo-gif"
               />
             </div>
@@ -413,9 +416,12 @@ const Takomo = () => {
           </p>
         </div>
         <div className="final-design-rectangle fade-in-element">
-          <img 
-            src={require('../assets/images/projects/Shot.gif')} 
-            alt="Shot Animation" 
+          <video 
+            src={require('../assets/images/projects/3.mov')} 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
             className="final-design-gif"
           />
         </div>
@@ -426,9 +432,12 @@ const Takomo = () => {
           </p>
         </div>
         <div className="final-design-rectangle fade-in-element">
-          <img 
-            src={require('../assets/images/projects/Iron.gif')} 
-            alt="Iron Animation" 
+          <video 
+            src={require('../assets/images/projects/2.mov')} 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
             className="final-design-gif"
           />
         </div>
