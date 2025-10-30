@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4ab2bd7b.css",
-    "main.js": "/static/js/main.bad36086.js",
+    "main.js": "/static/js/main.a12aeee4.js",
     "static/media/Intro.gif": "/static/media/Intro.c0d040e6ae118e65c005.gif",
     "static/media/Order.gif": "/static/media/Order.f6e4fafb7b2d15673950.gif",
     "static/media/1.mov": "/static/media/1.5683888931c634891762.mov",
@@ -23,7 +23,7 @@
     "static/media/VRInfo.jpeg": "/static/media/VRInfo.bb50905ebbb1581dd0ab.jpeg",
     "static/media/DuneInfo.jpeg": "/static/media/DuneInfo.30bba05c3836df178a0c.jpeg",
     "static/media/ImagineFX.png": "/static/media/ImagineFX.63e36ac5f302cc9853b8.png",
-    "static/media/ResumeUX.pdf": "/static/media/ResumeUX.8b06ac983994925eed03.pdf",
+    "static/media/ResumeUX.pdf": "/static/media/ResumeUX.b53c1b3c52bbfe3a0230.pdf",
     "static/media/S.png": "/static/media/S.aa2887825179796b22aa.png",
     "static/media/Robo.jpeg": "/static/media/Robo.26d81c9aadbea1be9448.jpeg",
     "static/media/UP1.png": "/static/media/UP1.201057ead83cbd46e779.png",
@@ -75,10 +75,10 @@
     "static/media/KaiNav.png": "/static/media/KaiNav.38ff614ca768cba30d5c.png",
     "index.html": "/index.html",
     "main.4ab2bd7b.css.map": "/static/css/main.4ab2bd7b.css.map",
-    "main.bad36086.js.map": "/static/js/main.bad36086.js.map"
+    "main.a12aeee4.js.map": "/static/js/main.a12aeee4.js.map"
   },
   "entrypoints": [
     "static/css/main.4ab2bd7b.css",
-    "static/js/main.bad36086.js"
+    "static/js/main.a12aeee4.js"
   ]
 }
